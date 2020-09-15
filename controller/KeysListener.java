@@ -36,9 +36,7 @@ public class KeysListener implements ActionListener {
             guessWord = panel.getWordGuessGame().getStringOfGuess();
             panel.getGuessKey().setFont(font);
             panel.getGuessKey().setText(guessWord);
-
             panel.getCanvas().setCountHealth(panel.getWordGuessGame().getCountHealth());
-
             panel.getCanvas().repaint();
         } else {
             keys.setEnabled(false);
@@ -47,9 +45,7 @@ public class KeysListener implements ActionListener {
             String guess = panel.getWordGuessGame().getStringOfGuess();
             panel.getGuessKey().setFont(new Font("Courier", Font.BOLD, 20));
             panel.getGuessKey().setText(guess);
-
             panel.getCanvas().setCountHealth(panel.getWordGuessGame().getCountHealth());
-
             if (panel.getWordGuessGame().getCountHealth() == 0 && !panel.getWordGuessGame().getGameFinish())
             {
                 panel.setGameState(WordGuessGamePanel.GameState.GAMEOVER);
@@ -63,12 +59,8 @@ public class KeysListener implements ActionListener {
                     i.setEnabled(false);
                 }
             }
-
-            panel.getCanvas().repaint();
-            
+            panel.getCanvas().repaint();      
             // System.out.println(c);
         }
     }
-
-
 }

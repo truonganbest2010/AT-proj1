@@ -58,11 +58,9 @@ public class WordGuessGame {
         indexOfWord = r.nextInt(wordPool.size()-1);
 
         countHealth = 5;
-        
         gameFinish = false;
         String word = wordPool.get(indexOfWord);
         size = word.length();
-
         stringOfKey = new char[size];
         stringOfGuess = new char[size];
 
@@ -121,6 +119,4 @@ public class WordGuessGame {
     public boolean getGameFinish(){
         return gameFinish;
     }
-
-
 }
