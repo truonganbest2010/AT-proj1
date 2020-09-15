@@ -26,29 +26,31 @@ public class DrawingCanvas extends JPanel {
         if (state == WordGuessGamePanel.GameState.READY){
             g2.setColor(Color.YELLOW);
             g2.setFont(fontCourier);
-            g2.drawString("Click <New> to Play Game", 20, 150);
+            g2.drawString("Click <New> to START Game", 30, 150);
         }
         else if (state == WordGuessGamePanel.GameState.GAMEOVER){
                 g2.setColor(Color.RED);
                 g2.setFont(fontCourier);
-                g2.drawString("YOU LOSE!", 125, 150);
+                g2.drawString("YOU LOST!", 170, 150);
+                g2.drawString("Click <New> to Continue", 45, 200);
         }
         else if (state == WordGuessGamePanel.GameState.PLAYING){
            
             g2.setColor(Color.BLUE);
             g2.setFont(fontCourier);
 
-            g2.drawString("Health Level", 20, 100);
+            g2.drawString("HEALTH LEVEL", 50, 100);
 
             for (int i = 0; i < countHealth; i++){
-                g2.fillRect(i*50 + 100, 180, 20, 30);
+                g2.fillRect(i*50 + 100, 150, 30, 60);
             }
         }
         else
         {
             g2.setColor(Color.WHITE);
             g2.setFont(fontCourier);
-            g2.drawString("YOU WON!", 125, 150);
+            g2.drawString("YOU WON!", 170, 150);
+            g2.drawString("Click <New> to Continue", 45, 200);
         }
 
 

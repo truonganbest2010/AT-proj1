@@ -30,6 +30,7 @@ public class KeysListener implements ActionListener {
             String keyWord;
             keyWord = panel.getWordGuessGame().getStringOfKey();
             panel.getGameKey().setFont(font);
+            panel.getGameKey().setForeground(Color.RED);;
             panel.getGameKey().setText(keyWord);
             String guessWord;
             guessWord = panel.getWordGuessGame().getStringOfGuess();
@@ -49,14 +50,14 @@ public class KeysListener implements ActionListener {
 
             panel.getCanvas().setCountHealth(panel.getWordGuessGame().getCountHealth());
 
-            if (panel.getWordGuessGame().getCountHealth() == 0 && panel.getWordGuessGame().getGameFinish() == false)
+            if (panel.getWordGuessGame().getCountHealth() == 0 && !panel.getWordGuessGame().getGameFinish())
             {
                 panel.setGameState(WordGuessGamePanel.GameState.GAMEOVER);
                 for (var i: panel.getCharacterKey()){
                     i.setEnabled(false);
                 }
             } 
-            if (panel.getWordGuessGame().getCountHealth() > 0 && panel.getWordGuessGame().getGameFinish() == true){
+            if (panel.getWordGuessGame().getCountHealth() > 0 && panel.getWordGuessGame().getGameFinish()){
                 panel.setGameState(WordGuessGamePanel.GameState.WIN);
                 for (var i: panel.getCharacterKey()){
                     i.setEnabled(false);

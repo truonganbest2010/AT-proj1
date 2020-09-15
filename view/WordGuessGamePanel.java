@@ -38,8 +38,8 @@ public class WordGuessGamePanel {
         //northPanel.setBorder(northTitle);
         cp.add(BorderLayout.NORTH, northPanel);
 
-        gameKey.setEnabled(false);
-        guessKey.setEnabled(false);
+        gameKey.setEditable(false);
+        guessKey.setEditable(false);
         
         northPanel.add(gameKey);
         northPanel.add(guessKey);
