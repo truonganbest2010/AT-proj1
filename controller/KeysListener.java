@@ -30,7 +30,7 @@ public class KeysListener implements ActionListener {
             String keyWord;
             keyWord = panel.getWordGuessGame().getStringOfKey();
             panel.getGameKey().setFont(font);
-            panel.getGameKey().setForeground(Color.RED);;
+            panel.getGameKey().setForeground(Color.RED);
             panel.getGameKey().setText(keyWord);
             String guessWord;
             guessWord = panel.getWordGuessGame().getStringOfGuess();

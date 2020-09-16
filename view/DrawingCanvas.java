@@ -38,6 +38,9 @@ public class DrawingCanvas extends JPanel {
             g2.setColor(Color.BLUE);
             g2.setFont(fontCourier);
             g2.drawString("HEALTH LEVEL", 50, 100);
+            for (int i = 0; i < 5; i++){
+                g2.drawRect(i*50 + 100, 125, 40, 100);
+            }
             for (int i = 0; i < countHealth; i++){
                 g2.fillRect(i*50 + 100, 125, 40, 100);
             }
